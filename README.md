@@ -1,8 +1,9 @@
 # Atelier_entrepot_de_donnee_epsi
 ## Équipe
-- Prénom N.
-- Prénom N.
-- Prénom N.
+- Nadege Matezere
+- Rémi Lhuissier 
+- Amel Mansouri
+- Maxence Etem
 
 ## Étape 1 : Jeu de données
 * **Jeu :** Counter-Strike: Global Offensive (CS:GO)
