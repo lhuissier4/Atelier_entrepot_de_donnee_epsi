@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS PLAYERS_MEDALHA (
 
     CONSTRAINT fk_pm_player
         FOREIGN KEY (idPlayer)
-        REFERENCES PLAYERS(idPlayer),
+        REFERENCES PLAYERS(id),
 
     CONSTRAINT fk_pm_medal
         FOREIGN KEY (idMedal)
