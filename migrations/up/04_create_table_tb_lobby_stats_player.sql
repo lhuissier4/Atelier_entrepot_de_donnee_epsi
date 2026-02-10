@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS LOBBY_STATS_PLAYER (
 
     CONSTRAINT fk_lobby_player
         FOREIGN KEY (idPlayer)
-        REFERENCES PLAYERS(idPlayer),
+        REFERENCES PLAYERS(id),
 
     CONSTRAINT uq_room_player
         UNIQUE (idRoom, idPlayer)
