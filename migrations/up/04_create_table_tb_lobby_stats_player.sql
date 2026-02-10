@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS LOBBY_STATS_PLAYER (
-    idLobbyGame      BIGINT PRIMARY KEY,
+    idLobbyGame      BIGINT ,
 
     idPlayer         BIGINT NOT NULL,
     idRoom           BIGINT NOT NULL,
@@ -54,5 +54,6 @@ CREATE TABLE IF NOT EXISTS LOBBY_STATS_PLAYER (
         FOREIGN KEY (idPlayer)
         REFERENCES PLAYERS(id),
 
-    
+    CONSTRAINT uq_room_player
+        PRIMARY KEY (idRoom, idPlayer)
 );
