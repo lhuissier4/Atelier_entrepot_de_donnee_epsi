@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS PLAYERS_MEDALHA (
+    idPlayer   BIGINT NOT NULL,
+    idMedal    BIGINT NOT NULL,
+    earnedAt   TIMESTAMP,
+
+    CONSTRAINT pk_players_medals
+        PRIMARY KEY (idPlayer, idMedal),
+
+    CONSTRAINT fk_pm_player
+        FOREIGN KEY (idPlayer)
+        REFERENCES PLAYERS(idPlayer),
+
+    CONSTRAINT fk_pm_medal
+        FOREIGN KEY (idMedal)
+        REFERENCES MEDALHA(idMedal)
+);
