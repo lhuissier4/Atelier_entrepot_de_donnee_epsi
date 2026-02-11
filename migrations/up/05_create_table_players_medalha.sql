@@ -7,9 +7,6 @@ CREATE TABLE IF NOT EXISTS PLAYERS_MEDALHA (
     dtRemove TIMESTAMP NOT NULL,
     flActive BOOLEAN NOT NULL,
 
-    CONSTRAINT pk_players_medals
-        PRIMARY KEY (idPlayer, idMedal),
-
     CONSTRAINT fk_pm_player
         FOREIGN KEY (idPlayer)
         REFERENCES PLAYERS(id),
