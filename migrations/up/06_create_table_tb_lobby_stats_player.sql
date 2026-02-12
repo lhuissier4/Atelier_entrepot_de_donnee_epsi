@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS LOBBY_STATS_PLAYER (
     qtLastAlive      INTEGER NOT NULL,
     qtClutchWon      INTEGER NOT NULL,
     qtRoundsPlayed   INTEGER NOT NULL,
-    idDescMapName      VARCHAR(30) NOT NULL,
+    idDescMapName    BIGINT NOT NULL,
     vlLevel          INTEGER NOT NULL,
 
     qtSurvived       INTEGER NOT NULL,
