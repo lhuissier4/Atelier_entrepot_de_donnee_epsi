@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS Dim_Player (
-idPlayer SERIAL PRIMARY KEY,
+idPlayer INT PRIMARY KEY,
 descCountry VARCHAR(100),
 dtBirth DATE,
 dtRegistration DATE
@@ -8,7 +8,7 @@ dtRegistration DATE
 
 
 CREATE TABLE IF NOT EXISTS Dim_Medal (
-idMedal SERIAL PRIMARY KEY,
+idMedal INT PRIMARY KEY,
 descMedal VARCHAR(100),
 descTypeMedal VARCHAR(50)
 );
@@ -16,13 +16,13 @@ descTypeMedal VARCHAR(50)
 
 
 CREATE TABLE IF NOT EXISTS Dim_Map (
-idMap SERIAL PRIMARY KEY,
+idMap INT PRIMARY KEY,
 descMapName VARCHAR(100) UNIQUE
 );
 
 
 CREATE TABLE IF NOT EXISTS Dim_Time (
-idTime SERIAL PRIMARY KEY,
+idTime INT PRIMARY KEY,
 fullDate DATE UNIQUE,
 year INT,
 month INT,
@@ -49,7 +49,7 @@ ON CONFLICT (fullDate) DO NOTHING;
 
 
 CREATE TABLE IF NOT EXISTS Fact_Lobby_Stats (
-id SERIAL PRIMARY KEY,
+id INT PRIMARY KEY,
 idPlayer INT NOT NULL,
 idMap INT NOT NULL,
 idTime INT NOT NULL,
@@ -66,7 +66,7 @@ FOREIGN KEY (idTime) REFERENCES Dim_Time(idTime)
 
 
 CREATE TABLE IF NOT EXISTS Fact_Player_Medals (
-id SERIAL PRIMARY KEY,
+id INT PRIMARY KEY,
 idPlayer INT NOT NULL,
 idMedal INT NOT NULL,
 idTime INT NOT NULL,
