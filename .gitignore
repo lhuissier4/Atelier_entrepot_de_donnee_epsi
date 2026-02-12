@@ -1,0 +1,4 @@
+.venv/
+*.duckbd
+atelier2.py
+.idea/
