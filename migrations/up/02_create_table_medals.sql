@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS MEDALHA (
     idMedal      BIGINT PRIMARY KEY,
-    medalName    VARCHAR,
-    medalType    VARCHAR
+    medalName    VARCHAR NOT NULL,
+    medalType    VARCHAR NOT NULL
 );
