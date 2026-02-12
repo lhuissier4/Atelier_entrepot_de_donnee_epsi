@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS PLAYERS (
     id  BIGINT PRIMARY KEY,
-    dateBirth  VARCHAR NOT NULL,
-    dateRegistration   TIMESTAMP NOT NULL,
+    dateBirth  DATE NOT NULL,
+    dateRegistration TIMESTAMP NOT NULL,
     idCountry BIGINT NOT NULL
 );
